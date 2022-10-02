@@ -7,7 +7,8 @@ public class App {
     //todo Task 1
     public void largestNumber(){
         // input your solution here
-    }
+        Scanner scan = new Scanner(System.in);
+        }
 
     //todo Task 2
     public void stairs(){
