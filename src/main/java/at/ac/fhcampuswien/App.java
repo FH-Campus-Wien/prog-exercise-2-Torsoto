@@ -12,11 +12,31 @@ public class App {
     //todo Task 2
     public void stairs(){
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+        int c = 1;
+        int a = sc.nextInt();
+        if (a>0)
+        {
+            System.out.print("n: ");
+            for (int i = 0; i<a;i++)
+            {
+                for (int j = 0; j<=i;j++)
+                {
+                    System.out.print(c+" ");
+                    c++;
+                }
+                System.out.println();
+            }
+        }
+        else {
+            System.out.println("n: "+"Invalid number!");
+        }
     }
 
     //todo Task 3
     public void printPyramid(){
         // input your solution here
+
     }
 
     //todo Task 4
