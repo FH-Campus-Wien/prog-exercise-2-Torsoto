@@ -74,8 +74,31 @@ public class App {
     public void marks() {
         // input your solution here
         Scanner sc = new Scanner(System.in);
-        int x,y;
-        x = sc.nextInt();
+        int x;
+        int y=1;
+        int z=0;
+        int i;
+        int b=0;
+        float a;
+        do {
+            System.out.print("Mark "+y+": ");
+            x = sc.nextInt();
+            i =z+x;
+            if (x>5 || x<0){
+                System.out.println("Invalid mark!");
+            }
+            else{
+                z = x;
+            }
+            if (x == 5){
+                b++;
+            }
+            y++;
+        }
+        while (x<5 && x>0);
+        a = (float) i/y;
+        System.out.println("Average: "+ a);
+        System.out.println("Negative marks: "+b);
     }
 
     //todo Task 6
