@@ -96,7 +96,7 @@ public class App {
             i =z+x;
         }
         while (x<5 && x>0);
-        a = i/y;
+        a =  i/y;
         System.out.println("Average: "+ a);
         System.out.println("Negative marks: "+b);
     }
@@ -104,6 +104,23 @@ public class App {
     //todo Task 6
     public void happyNumbers() {
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+        System.out.print("n: ");
+        int n = sc.nextInt();
+        int s=0;
+        while (n!=1 && n!=4){
+            while (n>0){
+                s += Math.pow(n%10,2);
+                n = n / 10;
+            }
+            s = 0;
+        }
+        if (n == 1){
+            System.out.println("Happy number!");
+        }
+        else {
+            System.out.println("Sad number!");
+        }
     }
 
     public static void main(String[] args) {
