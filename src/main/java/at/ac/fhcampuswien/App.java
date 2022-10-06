@@ -83,7 +83,6 @@ public class App {
         do {
             System.out.print("Mark "+y+": ");
             x = sc.nextInt();
-            i =z+x;
             if (x>5 || x<0){
                 System.out.println("Invalid mark!");
             }
@@ -94,9 +93,10 @@ public class App {
                 b++;
             }
             y++;
+            i =z+x;
         }
         while (x<5 && x>0);
-        a = (float) i/y;
+        a = i/y;
         System.out.println("Average: "+ a);
         System.out.println("Negative marks: "+b);
     }
