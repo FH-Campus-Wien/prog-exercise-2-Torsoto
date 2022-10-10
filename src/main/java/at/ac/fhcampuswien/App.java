@@ -105,20 +105,23 @@ public class App {
     public void happyNumbers() {
         // input your solution here
         Scanner sc = new Scanner(System.in);
+        int n, s = 1, num, sum=0;
         System.out.print("n: ");
-        int n = sc.nextInt();
-        int s=0;
-        while (n!=1 && n!=4){
-            while (n>0){
-                s += Math.pow(n%10,2);
-                n = n / 10;
+        n = sc.nextInt();
+        num = n;
+        while (num != 1 && num!=4){
+            while (num > 0){
+                s = num % 10;
+                sum += Math.pow(s,2);
+                num = num /10;
             }
-            s = 0;
+            num = sum;
+            sum = 0;
         }
-        if (n == 1){
+        if (num == 1){
             System.out.println("Happy number!");
         }
-        else {
+        else{
             System.out.println("Sad number!");
         }
     }
