@@ -8,6 +8,7 @@ public class App {
     public void largestNumber(){
         // input your solution here
         Scanner scan = new Scanner(System.in);
+
         }
 
     //todo Task 2
