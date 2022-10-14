@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class App {
 
@@ -74,38 +75,37 @@ public class App {
     public void marks() {
         // input your solution here
         Scanner sc = new Scanner(System.in);
-        int x;
-        int y=1;
-        int z=0;
-        int i;
-        int b=0;
-        float a;
+        int a=1,c=0,x;
+        float sum =0;
         do {
-            System.out.print("Mark "+y+": ");
             x = sc.nextInt();
-            if (x>5 || x<0){
+            System.out.print("Mark "+a+": ");
+            if (x<0 || x>5){
                 System.out.println("Invalid mark!");
             }
-            else{
-                z = x;
+            if (x==5){
+                c++;
             }
-            if (x == 5){
-                b++;
+            if (x<=5 && x>=1){
+                a++;
+                sum+=x;
             }
-            y++;
-            i =z+x;
         }
-        while (x<5 && x>0);
-        a =  i/y;
-        System.out.println("Average: "+ a);
-        System.out.println("Negative marks: "+b);
+        while (x>0);
+        double d = sum/(a-1);
+        if (Double.isNaN(d)){
+            d = 0;
+        }
+        System.out.printf("Average: %.2f",d);
+        System.out.println();
+        System.out.println("Negative marks: "+c);
     }
 
     //todo Task 6
     public void happyNumbers() {
         // input your solution here
         Scanner sc = new Scanner(System.in);
-        int n, s = 1, num, sum=0;
+        int n, s, num, sum=0;
         System.out.print("n: ");
         n = sc.nextInt();
         num = n;
