@@ -1,6 +1,5 @@
 package at.ac.fhcampuswien;
 import java.util.Scanner;
-import java.util.Collections;
 
 public class App {
 
@@ -69,6 +68,46 @@ public class App {
     public void printRhombus() {
         // input your solution here
         // char = c = scan.next().char@(0)
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("h: ");
+        int h = sc.nextInt();
+        System.out.print("c: ");
+        char c = sc.next().charAt(0);
+
+        if(h % 2 == 0){
+            System.out.print("Invalid number!");
+            System.out.println();
+            return;
+        }
+        for (int i = 1; i<h/2+2;i++){
+            for (int j = 0; j<h/2-i+1;j++){
+                System.out.print(" ");
+            }
+            for (int k = i; k>=1;k--){
+                char x = (char) (c+1-k);
+                System.out.print(x);
+            }
+            for (int a = 2; a<=i;a++){
+                char y = (char) (c + 1 -a);
+                System.out.print(y);
+            }
+            System.out.println();
+        }
+        for (int i = 0; i<h/2;i++){
+            for (int j = 0; j<=i;j++){
+                System.out.print(" ");
+            }
+            for (int k = i; k<=h/2-1;k++){
+                char x = (char) ((c-h/2+1)+k);
+                System.out.print(x);
+            }
+            for (int k = i; k<=h/2-2;k++){
+                char y = (char) (c-1-k);
+                System.out.print(y);
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 5
